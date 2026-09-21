@@ -25,7 +25,7 @@ betterf/
 │   ├── backend/
 │   ├── frontend/
 │   └── decisions/
-└── app/                # Separate repository containing both applications
+└── app/                
     ├── backend/
     └── frontend/
 ```
@@ -34,16 +34,7 @@ Paths in this README are relative to the architecture repository unless stated o
 
 ## System overview
 
-Complete this section as the project's architecture is established:
-
-- Purpose and principal user journeys: `<describe>`
-- System boundaries and external dependencies: `<describe>`
-- Backend responsibilities: `<describe>`
-- Frontend responsibilities: `<describe>`
-- Communication between frontend and backend: `<describe>`
-- Deployment context and significant constraints: `<describe>`
-
-Use the workspace's `project-context.md` to locate business requirements when configured. Otherwise, consult the source settings in the workspace's `AGENTS.md`. Link to authoritative requirements rather than maintaining competing copies here.
+Refer to `betterf/project-context.md` to understand the context and the scope of the project and the business behind it as well.
 
 ## Backend architecture
 
