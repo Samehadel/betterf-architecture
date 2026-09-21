@@ -1,18 +1,18 @@
-# Response Handling — Reference Pattern
+# Response Handling — Implementation Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Consistent contracts
 
-Use a documented response contract across endpoints and keep frontend models aligned with it. Choose direct resource responses or a shared envelope explicitly; neither is established for BetterF yet.
+Use a documented response contract across endpoints and keep frontend models aligned with it. Retain centralized wrapping with a shared envelope. Define its exact wire fields in the API contract before implementation.
 
-If an envelope is selected, define payload, error, pagination, and diagnostic fields in [API conventions](../../api-specification.md). Document null handling, timestamp format, serialization names, and examples once rather than maintaining competing definitions.
+Define payload, error, pagination, and diagnostic fields in [API conventions](../../api-specification.md). Document null handling, timestamp format, serialization names, and examples once rather than maintaining competing definitions.
 
-## Optional centralized wrapping
+## Centralized wrapping
 
-In Spring MVC, `ResponseBodyAdvice` is one possible place to apply a shared envelope. Controllers return transport models and delegate domain behavior to services. Services should not build HTTP envelopes.
+Use Spring MVC `ResponseBodyAdvice` to apply the shared envelope centrally. Controllers return transport models and delegate domain behavior to services. Services should not build HTTP envelopes.
 
-If wrapping is adopted, specify and test:
+When implementing wrapping, specify and test:
 
 - Which controllers and content types it applies to.
 - How already-wrapped responses avoid double wrapping.

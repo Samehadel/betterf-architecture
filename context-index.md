@@ -4,7 +4,7 @@
 
 [README.md](README.md) is the repository entry point and defines [documentation status](README.md#documentation-status). Workspace instructions and business source locations live in the parent workspace's `AGENTS.md` and `project-context.md`.
 
-General guidance is retained here for reuse. Reference examples are not product requirements, confirmed tooling, or accepted BetterF technology decisions. Consult accepted decisions before implementation; unresolved project choices remain open.
+The Spring Boot and Angular stack and its reusable technical conventions are selected for BetterF. See the accepted [technology baseline](decisions/0001-technology-baseline.md). Examples are not product requirements or evidence of installed tooling; product-specific choices remain open.
 
 ## Strategic documents
 
@@ -17,7 +17,7 @@ General guidance is retained here for reuse. Reference examples are not product 
 
 ## Topic index
 
-Read strategic guidance first, then the relevant optional reference. Backend guides live in `backend/`; frontend guides live in `frontend/`.
+Read strategic guidance first, then the relevant implementation guide. Backend guides live in `backend/`; frontend guides live in `frontend/`.
 
 | Topic | Read first | Reference |
 |---|---|---|

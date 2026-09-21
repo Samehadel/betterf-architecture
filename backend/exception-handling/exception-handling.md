@@ -1,6 +1,6 @@
-# Exception Handling — Reference Pattern
+# Exception Handling — Implementation Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Error responsibilities
 
@@ -25,7 +25,7 @@ Each domain can implement that interface with its own error definitions. A share
 
 ## Central translation
 
-If Spring MVC is selected, `@RestControllerAdvice` and `@ExceptionHandler` can centralize translation. Cover domain errors, request validation, access failures, persistence failures, and unexpected exceptions. Do not map every database failure to a client conflict: distinguish known constraint conflicts from internal faults.
+Use Spring MVC; `@RestControllerAdvice` and `@ExceptionHandler` can centralize translation. Cover domain errors, request validation, access failures, persistence failures, and unexpected exceptions. Do not map every database failure to a client conflict: distinguish known constraint conflicts from internal faults.
 
 Coordinate errors raised before controller invocation with the security layer so they follow the agreed contract too.
 

@@ -1,10 +1,10 @@
-# Angular Routing — Reference Patterns
+# Angular Routing — Implementation Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Route structure
 
-If Angular Router is selected, define routes around approved user journeys. Use `loadComponent` for individual standalone pages and `loadChildren` to group feature route trees where useful. Include deliberate fallback and missing-resource behavior.
+Use Angular Router and define routes around approved user journeys. Use `loadComponent` for individual standalone pages and `loadChildren` to group feature route trees where useful. Include deliberate fallback and missing-resource behavior.
 
 Illustrative route, not a BetterF URL:
 
@@ -18,7 +18,7 @@ Illustrative route, not a BetterF URL:
 
 ## Parameters and state
 
-`withComponentInputBinding()` is one possible way to expose route data as component inputs. Otherwise consume router state explicitly. Account for parameter changes while the same component instance remains active.
+Use `withComponentInputBinding()` to expose route data as component inputs. Account for parameter changes while the same component instance remains active.
 
 Choose provider scope based on state ownership. Verify route reuse, reset, and injector lifetime instead of assuming a fresh store is created on every navigation.
 

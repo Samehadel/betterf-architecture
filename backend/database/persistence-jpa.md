@@ -1,10 +1,10 @@
-# Persistence & JPA — Reference Pattern
+# Persistence & JPA — Implementation Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Entities and repositories
 
-If JPA is selected, keep entities and repositories inside the owning module. Expose public models through service interfaces rather than returning persistence entities across module boundaries.
+Use Spring Data JPA and Hibernate; keep entities and repositories inside the owning module. Expose public models through service interfaces rather than returning persistence entities across module boundaries.
 
 - Use a consistent entity naming convention and explicit table mappings.
 - Select identifiers and generation strategy to fit the database and workload.
@@ -26,7 +26,7 @@ public interface ResourceSummaryProjection {
 }
 ```
 
-Keep entity-to-response mapping inside the module. MapStruct is an optional way to generate mapping code; shared mapper interfaces are not assumed to exist.
+Keep entity-to-response mapping inside the module. Use MapStruct to generate mapping code; shared mapper interfaces are not assumed to exist.
 
 ## Pagination and transactions
 

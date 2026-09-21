@@ -1,11 +1,11 @@
 # Frontend Guides
 
-Start with [Frontend Architecture](../frontend-architecture.md) for reusable design guidance. These guides are reference patterns; framework-specific content applies only after BetterF adopts the relevant technology. See [documentation status](../README.md#documentation-status).
+Start with [Frontend Architecture](../frontend-architecture.md) for the selected technology stack and reusable design rules. These guides apply to that stack; examples do not define BetterF business requirements. See [documentation status](../README.md#documentation-status).
 
 | Topic | Scope |
 |---|---|
 | [Angular signals](angular-signals/angular-signals.md) | Local and derived state, side effects, and interoperability |
-| [NgRx Signal Store](ngrx-signal-store/ngrx-signal-store.md) | Optional feature state patterns |
+| [NgRx Signal Store](ngrx-signal-store/ngrx-signal-store.md) | feature state patterns |
 | [Standalone components](standalone-components/standalone-components.md) | Component boundaries, inputs, and outputs |
 | [Routing](routing/routing.md) | Route organization, parameters, guards, and lifecycle |
 | [HTTP & interceptors](http-interceptors/http-interceptors.md) | Typed clients and shared request concerns |

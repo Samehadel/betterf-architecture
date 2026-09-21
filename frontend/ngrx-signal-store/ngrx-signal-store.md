@@ -1,10 +1,10 @@
-# NgRx Signal Store — Reference Patterns
+# NgRx Signal Store — Implementation Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Store composition
 
-If NgRx Signal Store is adopted, the following building blocks can organize feature state:
+Use NgRx Signal Store for feature state. The following building blocks can organize feature state:
 
 | Building block | Purpose |
 |---|---|

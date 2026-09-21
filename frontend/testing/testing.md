@@ -1,6 +1,6 @@
-# Frontend Testing — Reference Patterns
+# Frontend Testing — Implementation Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Test layers
 
@@ -9,7 +9,7 @@
 - Test components through public inputs, rendered output, and user interactions.
 - Use end-to-end tests for approved critical journeys, not every individual implementation detail.
 
-## Optional Angular patterns
+## Angular testing patterns
 
 Import standalone components into `TestBed`. Set signal inputs with `fixture.componentRef.setInput()` and allow rendering to settle before assertions. Use `HttpTestingController` for HTTP client tests and verify outstanding requests are resolved.
 
@@ -23,7 +23,7 @@ Prefer accessible roles, names, and labels for user interactions. Use stable tes
 
 Derive journeys from BetterF requirements. Include relevant access restrictions, navigation, error recovery, keyboard use, and responsive layouts. Keep fixtures isolated and repeatable; avoid relying on uncontrolled shared data.
 
-Playwright is one possible browser test tool. Choose the runner, browsers, server startup, and authentication fixtures when the application is configured.
+Use Playwright for browser tests. Configure browsers, server startup, and authentication fixtures when the application is initialized.
 
 ## Commands and coverage
 

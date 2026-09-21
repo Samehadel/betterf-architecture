@@ -2,7 +2,7 @@
 
 ## Status
 
-BetterF's endpoints and wire contracts have not yet been defined. This document retains a checklist for designing consistent APIs; it does not establish an API base path, response envelope, pagination format, error catalog, authentication transport, or documentation URL.
+BetterF's endpoints and wire contracts have not yet been defined. This document retains a checklist for designing consistent APIs; it does not establish an API base path, envelope field schema, pagination format, error catalog, authentication transport, or documentation URL. Centralized response wrapping is the retained implementation convention.
 
 ## Endpoint design
 
@@ -28,4 +28,4 @@ Reusable implementation considerations live in [response handling](backend/respo
 
 ## Contract workflow
 
-Select contract-first generation or code-derived documentation in an architecture decision. Keep the chosen contract source, implementation, client models, and tests aligned in the same change. Add live documentation URLs only after they are configured and verified.
+Use handwritten Spring MVC controllers and request/response models with aligned OpenAPI documentation. Keep implementation, documented contracts, client models, and tests aligned in the same change. Controller/model generation is not part of the retained workflow. Add live documentation URLs only after they are configured and verified.

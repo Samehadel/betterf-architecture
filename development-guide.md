@@ -2,9 +2,15 @@
 
 ## Current status
 
-The workspace separates architecture documentation from application code. Application setup commands, runtime versions, service dependencies, and CI checks are not yet documented. Do not run placeholder commands or assume inherited build plugins are installed.
+The workspace separates architecture documentation from application code. The Java/Spring Boot and Angular stack is selected. Exact versions, application setup commands, runtime configuration, and CI checks are not yet documented. Do not run placeholder commands or assume inherited build plugins are installed.
 
 Read the workspace `AGENTS.md` and `project-context.md` for working instructions and source locations. Start architecture navigation at [README.md](README.md) or the [context index](context-index.md).
+
+## Retained tooling
+
+Use the Gradle wrapper for the Spring Boot backend and the Angular/Node toolchain for the frontend. Use PostgreSQL and Liquibase for persistence and migrations. The framework, state, styling, localization, and test tooling are listed in the [backend](backend-architecture.md#technology-stack) and [frontend](frontend-architecture.md#technology-stack) stack tables.
+
+Pin versions and configure build/test plugins when creating the applications. Do not assume a wrapper, npm script, migration task, or coverage gate exists before it is added.
 
 ## Setup documentation to add
 

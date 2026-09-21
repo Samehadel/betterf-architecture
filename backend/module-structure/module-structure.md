@@ -1,6 +1,6 @@
-# Module Structure — Reference Pattern
+# Module Structure — Implementation Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Public and private boundaries
 
@@ -41,6 +41,6 @@ Technical modules contain shared infrastructure rather than product behavior. Th
 5. Add migrations and tests for the behavior being introduced.
 6. Verify dependency boundaries with the selected architecture-test tooling.
 
-Spring Modulith is one possible enforcement tool. Its module and named-interface configuration must match the chosen package structure; a directory named `api` alone is not proof of enforcement.
+Use Spring Modulith for module boundary enforcement. Its module and named-interface configuration must match the chosen package structure; a directory named `api` alone is not proof of enforcement.
 
-Base entity classes, response marker interfaces, mapper libraries, and package prefixes must be selected explicitly rather than assumed to exist.
+Use MapStruct and the entity/View conventions in the backend architecture. Shared base classes and the package prefix must be defined during implementation; do not assume those classes already exist.

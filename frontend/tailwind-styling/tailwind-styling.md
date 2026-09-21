@@ -1,10 +1,10 @@
-# Tailwind Styling — Reference Patterns
+# Tailwind Styling — Implementation Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Scope
 
-If Tailwind is selected, utility classes can express consistent spacing, layout, responsive behavior, and interaction states. Configure setup against the selected major version. Product colors, typography, component-CSS policy, and status styling remain project decisions.
+Use Tailwind utility classes to express consistent spacing, layout, responsive behavior, and interaction states. Configure setup against the selected major version. Product colors, typography, and status styling remain project decisions. Use utilities in templates and keep shared CSS in the global stylesheet.
 
 Use reusable components or shared style abstractions when repeated utility groups justify them. Keep keyboard focus visible and do not communicate meaning through color alone.
 

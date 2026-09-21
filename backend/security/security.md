@@ -1,6 +1,6 @@
 # Security — Design Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Separate responsibilities
 
@@ -18,7 +18,7 @@ Centralize authentication integration, HTTP security configuration, and common e
 
 No fixed roles, public paths, cookie names, token lifetimes, or refresh algorithm are specified by this reference.
 
-## Optional Spring Security integration
+## Spring Security integration
 
 A shared `SecurityFilterChain` can own HTTP authentication and common request rules. Method-level checks can express operation permissions; service-level checks still need to protect individual resources.
 

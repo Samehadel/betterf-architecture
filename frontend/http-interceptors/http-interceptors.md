@@ -1,6 +1,6 @@
-# HTTP & Interceptors — Reference Patterns
+# HTTP & Interceptors — Implementation Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Typed API clients
 
@@ -22,7 +22,7 @@ The example path and direct response shape are illustrative, not BetterF endpoin
 
 ## Shared interceptors
 
-If Angular is selected, functional interceptors can handle common concerns such as configured credentials, tracing, loading indicators, and shared error translation. Register them deliberately and test request/response ordering.
+Use Angular functional interceptors to handle common concerns such as configured credentials, tracing, loading indicators, and shared error translation. Register them deliberately and test request/response ordering.
 
 Keep credential handling restricted to intended API destinations. Choose cookie or header transport only after the security contract is decided; no inherited authentication interceptor is required.
 

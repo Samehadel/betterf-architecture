@@ -1,6 +1,6 @@
-# Backend Testing — Reference Patterns
+# Backend Testing — Implementation Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Test scope
 
@@ -12,14 +12,14 @@
 
 Organize tests so the corresponding production behavior is easy to find. Express intent with arrange/act/assert and reusable fixtures where setup repeats.
 
-## Optional Spring/JUnit patterns
+## Spring/JUnit patterns
 
 - Mockito can isolate service dependencies without starting Spring.
 - `@SpringBootTest` with `@AutoConfigureMockMvc` can exercise controller, service, and persistence integration.
 - `@DataJpaTest` can focus tests on non-trivial persistence queries.
 - Spring Modulith can verify configured application-module boundaries.
 
-These tools are references, not installed dependencies. Choose an assertion library consistently with the application build.
+These tools are selected but not yet configured. Use AssertJ consistently for assertions.
 
 ## Integration fixtures
 

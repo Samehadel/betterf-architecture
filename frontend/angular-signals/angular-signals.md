@@ -1,10 +1,10 @@
-# Angular Signals — Reference Patterns
+# Angular Signals — Implementation Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## State and derived values
 
-If Angular signals are adopted, use writable signals for local state and computed signals for values derived from it. Keep side effects out of computed values.
+Use Angular signals: writable signals for local state and computed signals for values derived from it. Keep side effects out of computed values.
 
 ```typescript
 const search = signal('');
@@ -38,6 +38,6 @@ For changing resource identifiers, design data loading to respond to identifier 
 
 ## Rendering and cleanup
 
-Choose change detection and zoneless configuration when the Angular version is selected. Do not assume that signals are the only notification mechanism or that a particular change detection strategy is framework-mandated.
+Use the project's zoneless and OnPush conventions; configure them for the selected Angular version. Do not assume that signals are the only notification mechanism or that a particular change detection strategy is framework-mandated.
 
 Test derived state, asynchronous initial states, input changes, and teardown of subscriptions/effects. Keep framework-version configuration in the application rather than treating this reference as a runnable setup.

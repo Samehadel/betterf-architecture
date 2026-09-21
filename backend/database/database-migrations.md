@@ -1,12 +1,12 @@
-# Database Migrations — Reference Pattern
+# Database Migrations — Implementation Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## General discipline
 
 Version schema changes, preserve applied migration history, and give migrations an owning module. Document execution order, compatibility, and recovery. Where reversal would lose data, record the limitation and a recovery plan rather than claiming a destructive rollback restores everything.
 
-## Optional Liquibase layout
+## Liquibase layout
 
 ```text
 src/main/resources/db/
@@ -41,7 +41,7 @@ The example is not a BetterF table definition. Identifier generation, column cas
 
 ## Configuration and execution
 
-If the example layout is adopted in Spring Boot, the matching location is:
+For the illustrated layout, configure Spring Boot with the matching location:
 
 ```properties
 spring.liquibase.change-log=classpath:db/changelog-master.yaml

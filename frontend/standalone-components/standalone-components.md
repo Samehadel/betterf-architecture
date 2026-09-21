@@ -1,10 +1,10 @@
-# Angular Standalone Components — Reference Patterns
+# Angular Standalone Components — Implementation Guide
 
-> Reusable reference, not an accepted BetterF technology or product decision. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Component boundaries
 
-If Angular standalone components are adopted, each component imports the template dependencies it uses. Keep page-level orchestration distinct from reusable presentational components.
+Each Angular standalone component imports the template dependencies it uses. Keep page-level orchestration distinct from reusable presentational components.
 
 A neutral presentational example:
 
@@ -28,13 +28,13 @@ export class ItemCardComponent {
 <button type="button" (click)="selected.emit()">{{ label() }}</button>
 ```
 
-This example is not a BetterF feature or an accepted template/change-detection convention.
+This example follows the selected standalone, external-template, and OnPush conventions; it does not define a BetterF feature.
 
 ## Imports and dependency injection
 
 Import directives, pipes, components, and forms support used by the template. Standalone components are imported in `TestBed` rather than placed in `declarations`.
 
-Angular's `inject()` can resolve dependencies inside an injection context. Decide project-wide injection and template conventions after selecting the framework version.
+Angular's `inject()` can resolve dependencies inside an injection context. Use `inject()` and external templates as specified in the frontend architecture.
 
 ## Composition
 

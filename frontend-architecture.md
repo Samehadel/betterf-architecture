@@ -2,7 +2,41 @@
 
 ## Status
 
-This document retains reusable frontend design guidance. BetterF's frontend framework, rendering model, state library, styling system, routes, and supported locales are not yet established here. The [frontend guides](frontend/README.md) preserve optional Angular, NgRx, and Tailwind patterns; their presence does not select that stack.
+BetterF uses Angular with standalone components, signals, NgRx Signal Store, and Tailwind CSS. The inherited technology conventions are retained. Product routes, feature names, supported locales, and visual identity remain to be designed. The [frontend guides](frontend/README.md) explain implementation patterns. See the accepted [technology baseline](decisions/0001-technology-baseline.md).
+
+## Technology stack
+
+| Concern | Selected technology |
+|---|---|
+| Framework and language | Angular, TypeScript |
+| Component model | Standalone components |
+| Reactivity | Angular signals with RxJS interoperability |
+| Feature state | NgRx Signal Store |
+| Cross-feature state | Classic NgRx Store only where shared/complex flows justify it |
+| Routing | Angular Router, lazy loading, functional guards |
+| HTTP | Angular HttpClient and functional interceptors |
+| Styling | Tailwind CSS |
+| Localization | Transloco |
+| Testing | Angular TestBed, Jest, Playwright |
+
+Pin compatible versions in the application. The stack is selected; installation and configuration remain implementation work.
+
+## Angular implementation conventions
+
+- Bootstrap with `bootstrapApplication()` and central provider configuration in `app.config.ts`; do not introduce NgModule-based application structure.
+- Use standalone components, directives, and pipes. Import each template dependency explicitly.
+- Retain zoneless change detection and `ChangeDetectionStrategy.OnPush` as project conventions; verify supported bootstrap APIs for the selected Angular version.
+- Use external HTML templates, `inject()` for dependency injection, and `input()`, `output()`, and `model()` for component interfaces.
+- Use signals for local state and `computed()` for derived state; effects perform side effects only.
+- Use `toSignal()` to expose Observable state to templates. Handle initial state explicitly and clean up manual subscriptions.
+- Use block control flow (`@if`, `@for`, `@switch`) and a stable identity in `@for` tracking.
+- Use NgRx Signal Store for feature state, `patchState()` for updates, entity helpers for normalized collections, and `rxMethod` for Observable-based operations.
+- Keep one store per domain concept within a feature. Coordinate cross-store interactions at page/use-case boundaries rather than injecting feature stores into each other.
+- Scope feature stores through route providers and verify reset/reuse behavior; reserve global providers for app-wide state.
+- Keep presentational components independent of stores and services; pass data and translated labels through inputs.
+- Use dedicated typed API clients consumed through store operations. Register functional HTTP interceptors centrally.
+- Use Tailwind utility classes for component styling; keep shared styles in the global stylesheet rather than component-specific CSS files.
+- Use Transloco for localized resources and signal-based consumption; the supported locales and persistence policy remain product decisions.
 
 ## Feature organization
 
@@ -19,7 +53,7 @@ Keep app-wide infrastructure distinct from feature logic. Share code when it has
 - Keep derived computations free of side effects. Perform asynchronous work through explicit operations with loading, success, and failure states.
 - Keep store dependencies explicit and avoid circular relationships.
 
-Signal APIs, store scope, template conventions, dependency injection syntax, and change detection configuration depend on the selected framework and versions.
+Follow the Angular conventions below and pin compatible package versions in the application.
 
 ## Routing and API integration
 
@@ -41,4 +75,4 @@ Keep user-facing text separate from business logic where localization is needed.
 
 Test state transitions and API clients in isolation; test components through their public inputs and user interactions. Use end-to-end tests for approved critical journeys. Prefer semantic selectors or stable test identifiers over incidental CSS structure.
 
-Frameworks, test commands, coverage targets, browser support, and visual conventions will be recorded when the application is configured.
+Use Angular TestBed and HTTP testing support, Jest for unit tests, and Playwright for end-to-end tests. Verify runner configuration against the selected Angular version. Exact test commands, coverage gates, browser support, and visual conventions will be recorded when the application is configured.

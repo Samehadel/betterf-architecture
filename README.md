@@ -4,12 +4,14 @@ This repository holds the version-controlled architecture for `betterf`. Backend
 
 ## Documentation status
 
-This repository currently contains a reusable architecture baseline. BetterF-specific domains, schema, endpoints, routes, authentication behavior, deployment topology, and technology selections remain to be designed.
+This repository currently contains a reusable architecture baseline. BetterF-specific domains, schema, endpoints, routes, authentication behavior, deployment topology remain to be designed. The inherited Spring Boot and Angular technology stack is retained for BetterF.
 
-- The strategic documents retain general engineering guidance.
-- Technology-specific backend and frontend guides are optional reference patterns, not accepted project decisions or evidence of an implementation.
+- The strategic documents define the retained technology stack and reusable engineering rules.
+- Backend and frontend guides describe the selected stack. They are implementation guidance, not evidence that the application or build configuration already exists.
 - Examples do not define BetterF product requirements. Validate framework-specific APIs against selected versions before implementation.
 - Record significant project choices in `decisions/` with **Proposed**, **Accepted**, or **Superseded** status. Accepted decisions govern the applicable implementation.
+
+The accepted [technology baseline](decisions/0001-technology-baseline.md) records the stack and its scope.
 
 Start with the [context index](context-index.md), [backend architecture](backend-architecture.md), [frontend architecture](frontend-architecture.md), [API conventions](api-specification.md), and [development guide](development-guide.md).
 
