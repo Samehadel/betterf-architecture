@@ -1,91 +1,31 @@
 # API Conventions
 
-> API response format and authentication are defined in [Backend Architecture](./backend-architecture.md). This document captures the shared HTTP conventions used across endpoints. It is a reference document, not a generated-contract source of truth.
+## Status
 
----
+BetterF's endpoints and wire contracts have not yet been defined. This document retains a checklist for designing consistent APIs; it does not establish an API base path, response envelope, pagination format, error catalog, authentication transport, or documentation URL.
 
-## Base URL & Content Type
+## Endpoint design
 
-- **Base URL**: `/api/v1`
-- **Content-Type**: `application/json`
+For each endpoint, document:
 
----
+- Purpose, resource ownership, HTTP method, path, and success status.
+- Request parameters and body, validation constraints, and response shape.
+- Authentication and authorization requirements, including resource access checks.
+- Failure responses, retry behavior, and idempotency where relevant.
+- Compatibility implications for existing clients.
 
-## Endpoint Conventions
+Use HTTP methods and status codes consistently. A no-content response must not contain a response envelope.
 
-All endpoints follow standard REST conventions:
+## Collections
 
-| Method | Pattern | Returns | Description |
-|---|---|---|---|
-| `POST` | `/api/v1/{resource}` | `201 Created` | Create a new resource |
-| `GET` | `/api/v1/{resource}` | `200 OK` | List with pagination |
-| `GET` | `/api/v1/{resource}/{id}` | `200 OK` | Fetch a single resource |
-| `PUT` | `/api/v1/{resource}/{id}` | `200 OK` | Replace a resource |
-| `PATCH` | `/api/v1/{resource}/{id}` | `200 OK` | Partial update |
-| `DELETE` | `/api/v1/{resource}/{id}` | `204 No Content` | Delete a resource |
+Define bounded pagination for growing collections. Choose page-based or cursor-based navigation explicitly, with defaults, limits, ordering, and response metadata. Document supported filters and sort fields; do not expose arbitrary persistence fields as an API contract.
 
----
+## Errors and responses
 
-## Pagination
+Maintain one authoritative contract for success and error responses. Stable machine-readable error identifiers must be distinct from user-facing messages. Keep internal details out of client responses and provide a correlation reference when useful for diagnostics.
 
-List endpoints accept standard pagination query parameters:
+Reusable implementation considerations live in [response handling](backend/response-handling/response-handling.md) and [exception handling](backend/exception-handling/exception-handling.md). These guides do not define an existing BetterF response implementation.
 
-```
-GET /api/v1/{resource}?page=0&size=20&sort=created_at,desc
-```
+## Contract workflow
 
-| Parameter | Type | Default | Description |
-|---|---|---|---|
-| `page` | integer | `0` | Page number (0-indexed) |
-| `size` | integer | `20` | Items per page (max 100) |
-| `sort` | string | — | Field and direction, e.g. `created_at,desc` |
-
-Paginated responses follow this shape inside `ApiResponse.data`:
-
-```json
-{
-  "content": [...],
-  "page_number": 0,
-  "page_size": 20,
-  "total_elements": 150,
-  "total_pages": 8,
-  "is_last": false
-}
-```
-
----
-
-## Filtering
-
-Endpoints that support filtering accept them as query parameters:
-
-```
-GET /api/v1/{resource}?status=ACTIVE&created_after=2026-01-01
-```
-
-Filter parameters are endpoint-specific and always documented in the corresponding YAML file.
-
----
-
-## Application Error Codes
-
-The `code` field in error responses is a machine-readable string used for client-side handling. Every domain module defines its own codes. Common system-level categories include:
-
-| Error Code | HTTP Status | Description |
-|---|---|---|
-| `VAL_*` | 400 | Request body or parameter failed validation |
-| `AUTH_*` | 401 / 403 | Missing token, invalid token, or insufficient permission |
-| `RES_*` | 404 / 409 | Missing resource or conflicting resource state |
-| `SYS_*` | 500 | Unexpected system or infrastructure failure |
-
-The authoritative error-code catalog lives in [backend-guides/exception-handling/exception-handling.md](backend/exception-handling/exception-handling.md). Keep this file aligned with those conventions, not with invented field names.
-
----
-
-## Live Documentation
-
-| Interface | URL |
-|---|---|
-| Swagger UI | `http://localhost:8080/swagger-ui/` |
-| OpenAPI JSON | `http://localhost:8080/v3/api-docs` |
-| Redoc | `http://localhost:8080/redoc.html` |
+Select contract-first generation or code-derived documentation in an architecture decision. Keep the chosen contract source, implementation, client models, and tests aligned in the same change. Add live documentation URLs only after they are configured and verified.

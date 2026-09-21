@@ -1,27 +1,16 @@
-# Frontend Implementation Guides
+# Frontend Guides
 
-> These guides contain the detailed implementation patterns, code examples, and conventions for each technical area of the frontend. They are the **"how"** — the [Frontend Architecture](../frontend-architecture.md) is the **"what and why"**.
+Start with [Frontend Architecture](../frontend-architecture.md) for reusable design guidance. These guides are reference patterns; framework-specific content applies only after BetterF adopts the relevant technology. See [documentation status](../README.md#documentation-status).
 
----
-
-## Guides
-
-| Topic | Description |
+| Topic | Scope |
 |---|---|
-| [NgRx Signal Store](./ngrx-signal-store/ngrx-signal-store.md) | Defining stores, `withState`, `withEntities`, `withMethods`, `rxMethod`, `patchState`, testing |
-| [Angular Signals](./angular-signals/angular-signals.md) | `signal`, `computed`, `effect`, `input`, `output`, `model`, `toSignal`, `toObservable`, zoneless |
-| [Standalone Components](./standalone-components/standalone-components.md) | Component anatomy, `imports`, smart vs presentational, directives, pipes, DI with `inject()` |
-| [Routing](./routing/routing.md) | `loadComponent`, `loadChildren`, route params as `input()`, functional guards, resolvers, route-level providers |
-| [HTTP & Interceptors](./http-interceptors/http-interceptors.md) | Functional interceptors, API service pattern, typed request/response models, error handling, `HttpTestingController` |
-| [Tailwind Styling](./tailwind-styling/tailwind-styling.md) | Setup, status badges, layout patterns, mobile-first, responsive prefixes, `@apply` |
-| [Testing](./testing/testing.md) | Signal Store tests, standalone component tests, `HttpTestingController`, Playwright E2E |
-| [i18n](./i18n/i18n.md) | Transloco setup, key naming convention (`feature.component.element`), signals-based usage, RTL with Tailwind, adding a new language |
+| [Angular signals](angular-signals/angular-signals.md) | Local and derived state, side effects, and interoperability |
+| [NgRx Signal Store](ngrx-signal-store/ngrx-signal-store.md) | Optional feature state patterns |
+| [Standalone components](standalone-components/standalone-components.md) | Component boundaries, inputs, and outputs |
+| [Routing](routing/routing.md) | Route organization, parameters, guards, and lifecycle |
+| [HTTP & interceptors](http-interceptors/http-interceptors.md) | Typed clients and shared request concerns |
+| [Tailwind styling](tailwind-styling/tailwind-styling.md) | Reusable layout and responsive examples |
+| [Internationalization](i18n/i18n.md) | Translation organization, locale decisions, and direction |
+| [Testing](testing/testing.md) | State, component, HTTP, and journey checks |
 
----
-
-## How to Use These Guides
-
-- **Starting a new feature?** Read [Standalone Components](./standalone-components/standalone-components.md) and [NgRx Signal Store](./ngrx-signal-store/ngrx-signal-store.md) first.
-- **Adding an API call?** Read [HTTP & Interceptors](./http-interceptors/http-interceptors.md).
-- **Writing tests?** Read [Testing](./testing/testing.md).
-- **Unsure about styling conventions?** Read [Tailwind Styling](./tailwind-styling/tailwind-styling.md).
+Product behavior and accepted decisions belong in the strategic documents and `decisions/`. Keep implementation examples aligned with those decisions without duplicating the authoritative rule.

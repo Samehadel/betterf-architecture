@@ -2,6 +2,17 @@
 
 This repository holds the version-controlled architecture for `betterf`. Backend and frontend documentation describe their respective responsibilities; shared decisions explain choices that affect the system as a whole.
 
+## Documentation status
+
+This repository currently contains a reusable architecture baseline. BetterF-specific domains, schema, endpoints, routes, authentication behavior, deployment topology, and technology selections remain to be designed.
+
+- The strategic documents retain general engineering guidance.
+- Technology-specific backend and frontend guides are optional reference patterns, not accepted project decisions or evidence of an implementation.
+- Examples do not define BetterF product requirements. Validate framework-specific APIs against selected versions before implementation.
+- Record significant project choices in `decisions/` with **Proposed**, **Accepted**, or **Superseded** status. Accepted decisions govern the applicable implementation.
+
+Start with the [context index](context-index.md), [backend architecture](backend-architecture.md), [frontend architecture](frontend-architecture.md), [API conventions](api-specification.md), and [development guide](development-guide.md).
+
 ## Workspace
 
 ```text
