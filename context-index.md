@@ -8,12 +8,13 @@ The Spring Boot and Angular stack and its reusable technical conventions are sel
 
 ## Strategic documents
 
-| Document | Responsibility |
-|---|---|
-| [Backend architecture](backend-architecture.md) | Boundaries, layering, data ownership, and backend decisions to establish |
+| Document                                          | Responsibility                                                               |
+|---------------------------------------------------|------------------------------------------------------------------------------|
+| [Backend architecture](backend-architecture.md)   | Boundaries, layering, data ownership, and backend decisions to establish     |
 | [Frontend architecture](frontend-architecture.md) | Feature organization, components, state, and frontend decisions to establish |
-| [API conventions](api-specification.md) | Checklist for the future API contract |
-| [Development guide](development-guide.md) | Setup status, workflow, and review checklist |
+| [API conventions](api-specification.md)           | Checklist for the future API contract                                        |
+| [Development guide](development-guide.md)         | Setup status, workflow, and review checklist                                 |
+| [Versioning guide](versioning.md)                 | Application version updated and consistency accross frontend and backend     |
 
 ## Topic index
 

@@ -64,6 +64,10 @@ Keep implementation in the sibling application's `frontend/` directory. Document
 
 ## Shared decisions
 
+- [Accepted application versioning](decisions/0003-application-versioning.md)
+
+- [Proposed development deployment](decisions/0002-development-deployment.md)
+
 Store significant architecture decisions in `decisions/` using descriptive names such as `0001-api-contract-strategy.md`. Each decision should include its status, context, choice, consequences, and relevant business or technical references.
 
 Use explicit statuses such as **Proposed**, **Accepted**, and **Superseded**. Preserve historical decisions and link superseded decisions to their replacements. Document shared contracts once and reference them from both backend and frontend documentation.
