@@ -4,6 +4,9 @@ This repository holds the version-controlled architecture for `betterf`. Backend
 
 ## Documentation status
 
+BTF-5 organization/account registration and email verification are now specified in [ADR 0005](decisions/0005-organization-registration.md). This accepted product-specific decision takes precedence over the earlier baseline statements below that those areas remain undesigned.
+
+
 This repository currently contains a reusable architecture baseline. BetterF-specific domains, schema, endpoints, routes, authentication behavior, deployment topology remain to be designed. The inherited Spring Boot and Angular technology stack is retained for BetterF.
 
 - The strategic documents define the retained technology stack and reusable engineering rules.
@@ -63,6 +66,9 @@ Start frontend documentation in `frontend/README.md`. Cover the topics relevant 
 Keep implementation in the sibling application's `frontend/` directory. Document how the UI consumes backend contracts; backend authorization remains responsible for protecting server-side operations.
 
 ## Shared decisions
+
+- [Organization registration and verification delivery](decisions/0005-organization-registration.md)
+
 
 - [Accepted application versioning](decisions/0003-application-versioning.md)
 

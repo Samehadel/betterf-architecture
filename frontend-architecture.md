@@ -2,6 +2,9 @@
 
 ## Status
 
+BTF-5 organization/account registration and email verification are now specified in [ADR 0005](decisions/0005-organization-registration.md). This accepted product-specific decision takes precedence over the earlier baseline statements below that those areas remain undesigned.
+
+
 BetterF uses Angular with standalone components, signals, NgRx Signal Store, and Tailwind CSS. The inherited technology conventions are retained. Product routes, feature names, supported locales, and visual identity remain to be designed. The [frontend guides](frontend/README.md) explain implementation patterns. See the accepted [technology baseline](decisions/0001-technology-baseline.md).
 
 ## Technology stack

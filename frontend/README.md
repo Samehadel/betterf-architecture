@@ -14,3 +14,7 @@ Start with [Frontend Architecture](../frontend-architecture.md) for the selected
 | [Testing](testing/testing.md) | State, component, HTTP, and journey checks |
 
 Product behavior and accepted decisions belong in the strategic documents and `decisions/`. Keep implementation examples aligned with those decisions without duplicating the authoritative rule.
+
+## Organization registration
+
+[ADR 0005](../decisions/0005-organization-registration.md) defines BTF-5 account, organization, verification email, access, and client behavior. The product owner's 2026-10-04 correction supersedes the earlier no-company-status wording in the issue.

@@ -2,6 +2,9 @@
 
 ## Status
 
+BTF-5 organization/account registration and email verification are now specified in [ADR 0005](decisions/0005-organization-registration.md). This accepted product-specific decision takes precedence over the earlier baseline statements below that those areas remain undesigned.
+
+
 BetterF uses Java and Spring Boot. The inherited technical stack and reusable conventions below are retained; domain models, deployment topology, and product-specific authentication behavior remain to be designed. The [backend guides](backend/README.md) explain implementation patterns. See the accepted [technology baseline](decisions/0001-technology-baseline.md).
 
 ## Technology stack
