@@ -24,6 +24,7 @@ Pin compatible versions in the application build. These choices specify the inte
 
 - Use the domain-first `api/`, `internal/`, and `controller/` structure from the [module guide](backend/module-structure/module-structure.md).
 - Expose service interfaces through `api/service/` and implement them in `internal/service/` using Spring `@Service` classes and constructor injection.
+- Use Lombok `@RequiredArgsConstructor` on Spring-managed classes that inject dependencies, and declare every injected dependency as a `private final` field. Let Lombok generate the constructor; do not use field or setter injection, handwritten dependency constructors, or `@Autowired` for this pattern.
 - Keep request objects and response Views in `api/dto/`; do not expose JPA entities. Use immutable response models and the `View` suffix.
 - Keep entities and Spring Data repositories in `internal/entity/` and `internal/repository/`. Entity names use the `Entity` suffix.
 - Use MapStruct `@Mapper(componentModel = "spring")` interfaces for entity/View mapping. Shared base entity, View, and mapper abstractions belong in common infrastructure when implemented.
