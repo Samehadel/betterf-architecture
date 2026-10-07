@@ -72,3 +72,15 @@ BTF-8 owns resends, revoke, and history. It must enforce capacity, a 60-second
 cooldown, old-token invalidation only for an allowed replacement, and a fresh
 seven-day expiry. BTF-6 supplies an explicit pending-management navigation
 placeholder; resend is unavailable until BTF-8 is delivered.
+
+## Persisted invitation history
+
+The project owner requested that earlier invitations remain visible after route
+navigation and refresh. `GET /api/invitations?page=0` returns a read-only projection
+of records for the verified authenticated administrator's own company, with 25
+records per page and `hasMore`. It sorts by attempted time and ID descending,
+exposes only InvitationView fields, and never sends email or returns token hashes.
+Invalid page values return 400; denied access returns 403. No persistence migration
+is needed. Acceptance/resend/revoke actions remain owned by BTF-7/BTF-8.
+Architecture guidance consulted for this addition:
+`16a2955250dd36a2f423423656ca919f0e87d539` on `origin/main`.

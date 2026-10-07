@@ -5,6 +5,13 @@ The page loads the current account, handles loading and denied access, and uses 
 route-scoped NgRx Signal Store. A typed API client obtains CSRF before each mutation
 and uses same-origin session cookies. Backend authorization remains authoritative.
 
+The page loads persisted company invitation records into a read-only **Previous
+invitations** section on every entry, so leaving the route or refreshing restores
+previous sends. Newest attempts appear first, with email, saved outcome, and link
+expiry. The store handles loading, empty, error/retry, and load-more states. History
+is separate from editable send rows and cannot submit email. Sending, acceptance,
+resend, and revoke behavior retain their existing ownership.
+
 The page starts with one email input and one Send action. Sending locks the row;
 SMTP_ACCEPTED produces green text and permanently locks the successful row. Only
 the last successful row exposes the accessible add button. Adding focuses the new
