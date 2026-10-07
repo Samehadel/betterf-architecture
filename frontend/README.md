@@ -14,3 +14,7 @@ Start with [Frontend Architecture](../frontend-architecture.md) for the selected
 | [Testing](testing/testing.md) | State, component, HTTP, and journey checks |
 
 Product behavior and accepted decisions belong in the strategic documents and `decisions/`. Keep implementation examples aligned with those decisions without duplicating the authoritative rule.
+
+## BetterF features
+
+- [Team invitations](team-invitations.md): BTF-6 sending, delivery feedback, and dependencies.
