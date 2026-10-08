@@ -4,6 +4,7 @@ Start with [Frontend Architecture](../frontend-architecture.md) for the selected
 
 | Topic | Scope |
 |---|---|
+| [Authentication state](authentication.md) | Shared account ownership and session lifecycle |
 | [Angular signals](angular-signals/angular-signals.md) | Local and derived state, side effects, and interoperability |
 | [NgRx Signal Store](ngrx-signal-store/ngrx-signal-store.md) | feature state patterns |
 | [Standalone components](standalone-components/standalone-components.md) | Component boundaries, inputs, and outputs |

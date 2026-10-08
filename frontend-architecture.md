@@ -63,7 +63,7 @@ Frontend guards improve navigation; the backend remains responsible for authoriz
 
 Keep HTTP details in dedicated API clients. Use typed request and response models aligned with the server contract. Configure base URLs per environment. Centralize shared request concerns where appropriate, while keeping feature-specific errors visible to the feature.
 
-Authentication transport, refresh behavior, error presentation, and any real-time connection strategy remain undecided. Do not assume a particular cookie, token, or endpoint contract.
+The application uses server sessions with refresh cookies and CSRF-protected mutations. See [authentication state and session recovery](frontend/authentication.md) for account ownership, startup loading, refresh coordination, and logout behavior. Any real-time connection strategy remains undecided.
 
 ## UI quality
 
