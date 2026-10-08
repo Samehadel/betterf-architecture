@@ -1,0 +1,13 @@
+# Invitation registration (BTF-7)
+
+`/invitation/accept#<uuid>.<token>` is a public Angular route. The page reads the credential into memory and removes the fragment using replacement navigation. Reloading then requires reopening the original email; credentials are not persisted in browser storage. A replacement fragment navigation resets the form and loads the new invitation.
+
+The route-scoped AcceptanceStore owns preview, role loading, submission and failure states. AcceptanceApi owns typed CSRF-protected requests; AuthStore owns the signed-in account. Successful explicit registration updates AuthStore and presents a success state with a link to the existing `/company` experience. Preview alone never registers a member. The company page hides invitation controls and uses member-specific copy for ordinary members.
+
+A valid form shows the company name and read-only invited email, and collects one full-name field, the shared professional-role list and a password matching administrator registration validation. It sends no selectable company/email or access-role input. Submission is exclusive while pending. Fields have semantic labels, inline validation, focus styles and responsive layout; loading/submission/success states use status announcements, errors use alerts, and failures retain a login next step. Capacity failures can be checked again without consuming the link.
+
+Preview waits for an in-flight same-tab refresh and obtains fresh CSRF before it can clear a different browser session; the page discards cached authentication after preview. Acceptance and subsequent account changes update the shared authentication store. Lost/network responses are not automatically replayed: users can reconcile invitation status or log in with their chosen password. `INVITATION_USED` never supplies an authenticated account.
+
+The backend transaction, cancellation of unfinished administrator signup, used-link history, capacity locking and session recovery contract are documented in [invitation acceptance](../backend/invitation-acceptance.md).
+
+Validation: 56 frontend tests, typecheck and production build pass. The real emailed invitation was checked at 390px and 1440px, including invalid input, read-only email, explicit registration, automatic login, member home and used-link feedback. The existing browser regression suite passed 8/10; both failures reproduce on unchanged develop (`c7e4167`): the landing test expects no API startup probe, and the registration test expects anonymous `/company` navigation to redirect to `/login`. These unrelated expectations remain unchanged.
