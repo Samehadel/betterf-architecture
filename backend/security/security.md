@@ -29,3 +29,7 @@ Choose CSRF and CORS configuration after the credential transport and deployment
 ## Verification
 
 Test anonymous access, invalid credentials, denied permissions, access to another user's resources, and the selected session lifecycle. Cover both HTTP entry points and other callers of protected use cases. Keep secrets and credential values out of logs and client error messages.
+
+## Current implementation proposal
+
+See [session refresh](../../decisions/0005-session-refresh.md) for the proposed refresh-cookie lifecycle, persistence, revocation, and failure contract.

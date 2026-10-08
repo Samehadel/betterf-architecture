@@ -39,3 +39,7 @@ Feature state should represent actionable failures. Coordinate global notificati
 Read base URLs from environment/application configuration. No deployment hostname or port is established here.
 
 With Angular's `HttpTestingController`, verify method, URL, parameters, body, headers/credentials where relevant, response mapping, and error propagation. Verify no unexpected requests remain after a test. Add integration coverage for the actual backend response format.
+
+## Current implementation proposal
+
+See [session refresh](../../decisions/0005-session-refresh.md) for coordinated renewal, CSRF recovery, bounded retries, and terminal failure handling.
