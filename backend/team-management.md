@@ -7,11 +7,11 @@ Verified active administrators may read only their company records through the i
 service. GET `/api/invitations/sent` returns all failed, accepted and unexpired pending
 invitations, sorted by successful send date or initial attempt date when never sent,
 then UUID, descending. Expired pending and revoked links are excluded. Accepted and
-failed records remain visible. GET `/api/invitations/members` returns all ACTIVE MEMBER
+failed records remain visible. GET `/api/invitations/members` returns all ACTIVE MEMBER and ADMIN
 accounts, sorted by activation timestamp (`ACCOUNT.UPDATED_AT`), then UUID, descending.
 It returns full name, email and the professional-role display label. Neither endpoint
-silently truncates records. Administrator accounts are excluded from this list but
-still count toward capacity. The legacy paged GET remains compatible for older clients.
+silently truncates records. Administrator accounts are included in this list and still count toward capacity,
+following the project owner’s updated display requirement. The legacy paged GET remains compatible for older clients.
 
 POST `/api/invitations/{id}/resend` rechecks ownership, recipient eligibility,
 capacity (default 10 including administrators), current validity and a 60-second
