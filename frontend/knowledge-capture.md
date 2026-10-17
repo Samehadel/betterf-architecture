@@ -1,6 +1,6 @@
 # Knowledge Writing Studio (BTF-13)
 
-The capture route `/knowledge/new` is available from organization home to active members and administrators. `/knowledge/tickets/:id` displays a published ticket. Both routes load the shared AuthStore and direct anonymous users to login. Backend authorization is authoritative. Route-scoped KnowledgeStore owns API operation state; the form owns unsaved content locally.
+The capture route `/knowledge/new` is available from organization home to active members and administrators. `/knowledge/tickets/:id` displays a published ticket. Both routes load the shared AuthStore and direct anonymous users to login. Backend authorization is authoritative. Each page component provides its own KnowledgeStore for API operation state; the form owns unsaved content locally. Component scoping ensures every new capture starts without the previously published ticket, even when Angular reuses a route injector.
 
 The selected Linear Writing Studio mockup governs the charcoal/lavender layout: writing area, contextual sidebar, and clear publish action. Mobile collapses the sidebar below the form. The block editor provides headings, paragraphs, lists, HTTP(S) links, and language-selected code, with add/remove/reorder controls and a rendered preview. Published code is highlighted through highlight.js; Angular escapes text and sanitizes rendered highlighting. Lists render with native list semantics.
 
