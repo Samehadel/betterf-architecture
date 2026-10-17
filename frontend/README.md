@@ -14,3 +14,5 @@ Start with [Frontend Architecture](../frontend-architecture.md) for the selected
 | [Testing](testing/testing.md) | State, component, HTTP, and journey checks |
 
 Product behavior and accepted decisions belong in the strategic documents and `decisions/`. Keep implementation examples aligned with those decisions without duplicating the authoritative rule.
+
+- [Knowledge capture (BTF-13)](knowledge-capture.md)
