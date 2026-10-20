@@ -64,6 +64,8 @@ Keep implementation in the sibling application's `frontend/` directory. Document
 
 ## Shared decisions
 
+- [Proposed individual identity and personal ownership](decisions/0006-individual-identity-and-personal-ownership.md)
+
 - [Accepted application versioning](decisions/0003-application-versioning.md)
 
 - [Proposed development deployment](decisions/0002-development-deployment.md)
