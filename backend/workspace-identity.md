@@ -8,6 +8,8 @@ ACCOUNT owns normalized email, credentials, verification state, name and a defau
 
 WORKSPACE owns its name, status and optional membership capacity. WORKSPACE_MEMBERSHIP associates accounts and workspaces many-to-many with a unique account/workspace pair, active flag, and OWNER or MEMBER role. Ownership grants membership administration, not authority to edit someone else's tickets. Each ticket has an immutable workspace and original creator. There is no personal-content fallback.
 
+For older active accounts with no default reference, the current-account endpoint provisions the missing default under the email lock exactly once. Existing memberships remain, and a non-null revoked default is not recreated. AccountView exposes defaultWorkspaceId independently of the selected workspace.
+
 Independent password signup creates a pending account and verification delivery. Successful activation provisions exactly one default workspace and owner membership in the same transaction. New invitation-led accounts also receive a default workspace plus the invited membership. The response selects the invited workspace while ordinary login selects the default. Existing accounts keep all their workspaces, profile and credentials.
 
 Social signup is outside this delivery. Its UI entry points are hidden and new provider-only account creation returns SIGNUP_REQUIRED. Existing provider identities and trusted linking/login code are retained; no credentials are discarded.
