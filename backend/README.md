@@ -14,3 +14,5 @@ Start with [Backend Architecture](../backend-architecture.md) for the selected t
 | [Testing](testing/testing.md) | Unit, integration, and architecture checks |
 
 Product behavior and accepted decisions belong in the strategic documents and `decisions/`. Keep implementation examples aligned with those decisions without duplicating the authoritative rule.
+
+The [workspace identity model](workspace-identity.md) specifies global accounts, membership authorization, signup, invitation acceptance and migration compatibility.
