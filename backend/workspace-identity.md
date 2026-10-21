@@ -16,7 +16,7 @@ Social signup is outside this delivery. Its UI entry points are hidden and new p
 
 Knowledge and invitation requests require X-Workspace-Id. Identity validates active account, workspace and membership for every operation; invitation management and renaming additionally require the workspace OWNER role. AccountView includes available workspaces and the selected membership role. GET /api/workspaces/{id} validates selection without mutating a global active-workspace field, so separate tabs can work in different workspaces.
 
-The UI passes explicit context, increments its session revision when selection changes, and leaves the current feature route before switching. This runs unsaved-capture guards and clears route-owned caches. Session refresh retains the selected workspace only while it remains in the returned active membership list. Missing memberships fail closed. Platform actuator data is denied to ordinary product identities; ownership does not grant platform operator access. Public health probes remain available.
+The UI passes explicit context, increments its session revision when selection changes, and leaves the current feature route before switching. This runs unsaved-capture guards and clears route-owned caches. Session refresh retains the selected workspace only while it remains in the returned active membership list. Otherwise the frontend leaves selection empty until the user explicitly chooses a workspace; capture drafts remain bound to their originating account and workspace. Missing memberships fail closed. Platform actuator data is denied to ordinary product identities; ownership does not grant platform operator access. Public health probes remain available.
 
 ## Invitation and verification transactions
 
