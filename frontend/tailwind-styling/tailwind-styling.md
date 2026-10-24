@@ -1,6 +1,6 @@
 # Tailwind Styling — Implementation Guide
 
-> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected theeverthread technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Scope
 
@@ -50,4 +50,4 @@ Use `sm:`, `md:`, `lg:`, `xl:` for progressive enhancement. Always start with th
 | Muted text | `text-sm text-gray-500` |
 | Page container | `mx-auto max-w-6xl px-4 py-8` |
 
-The class groups above are illustrative visual samples, not BetterF brand tokens. Verify contrast and interaction states in the final design. Add dark-mode and bidirectional variants only according to the chosen design requirements and library version.
+The class groups above are illustrative visual samples, not theeverthread brand tokens. Verify contrast and interaction states in the final design. Add dark-mode and bidirectional variants only according to the chosen design requirements and library version.

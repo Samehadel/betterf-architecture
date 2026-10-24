@@ -1,6 +1,6 @@
 # HTTP & Interceptors — Implementation Guide
 
-> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected theeverthread technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Typed API clients
 
@@ -18,7 +18,7 @@ getItem(id: string): Observable<ItemView> {
 }
 ```
 
-The example path and direct response shape are illustrative, not BetterF endpoints or contracts.
+The example path and direct response shape are illustrative, not theeverthread endpoints or contracts.
 
 ## Shared interceptors
 

@@ -2,7 +2,7 @@
 
 ## Status
 
-BetterF's endpoints and wire contracts have not yet been defined. This document retains a checklist for designing consistent APIs; it does not establish an API base path, envelope field schema, pagination format, error catalog, authentication transport, or documentation URL. Centralized response wrapping is the retained implementation convention.
+theeverthread's endpoints and wire contracts have not yet been defined. This document retains a checklist for designing consistent APIs; it does not establish an API base path, envelope field schema, pagination format, error catalog, authentication transport, or documentation URL. Centralized response wrapping is the retained implementation convention.
 
 ## Endpoint design
 
@@ -24,7 +24,7 @@ Define bounded pagination for growing collections. Choose page-based or cursor-b
 
 Maintain one authoritative contract for success and error responses. Stable machine-readable error identifiers must be distinct from user-facing messages. Keep internal details out of client responses and provide a correlation reference when useful for diagnostics.
 
-Reusable implementation considerations live in [response handling](backend/response-handling/response-handling.md) and [exception handling](backend/exception-handling/exception-handling.md). These guides do not define an existing BetterF response implementation.
+Reusable implementation considerations live in [response handling](backend/response-handling/response-handling.md) and [exception handling](backend/exception-handling/exception-handling.md). These guides do not define an existing theeverthread response implementation.
 
 ## Contract workflow
 

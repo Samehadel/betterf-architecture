@@ -2,7 +2,7 @@
 
 ## Status
 
-BetterF uses Angular with standalone components, signals, NgRx Signal Store, and Tailwind CSS. The inherited technology conventions are retained. Product routes, feature names, supported locales, and visual identity remain to be designed. The [frontend guides](frontend/README.md) explain implementation patterns. See the accepted [technology baseline](decisions/0001-technology-baseline.md).
+theeverthread uses Angular with standalone components, signals, NgRx Signal Store, and Tailwind CSS. The inherited technology conventions are retained. Product routes, feature names, supported locales, and visual identity remain to be designed. The [frontend guides](frontend/README.md) explain implementation patterns. See the accepted [technology baseline](decisions/0001-technology-baseline.md).
 
 ## Technology stack
 
@@ -40,7 +40,7 @@ Pin compatible versions in the application. The stack is selected; installation 
 
 ## Feature organization
 
-Group code by feature or domain, with routes, page components, reusable components, state, API clients, and models close to their owner. Determine actual feature names from BetterF requirements.
+Group code by feature or domain, with routes, page components, reusable components, state, API clients, and models close to their owner. Determine actual feature names from theeverthread requirements.
 
 Keep app-wide infrastructure distinct from feature logic. Share code when it has a demonstrated cross-feature responsibility; do not turn a shared directory into a dependency shortcut.
 
@@ -69,7 +69,7 @@ Authentication transport, refresh behavior, error presentation, and any real-tim
 
 Provide loading, empty, error, and permission states. Use semantic controls, keyboard-accessible interactions, visible focus, and responsive layouts. Share visual conventions consistently without inheriting another product's colors or status vocabulary.
 
-Keep user-facing text separate from business logic where localization is needed. Supported languages, default locale, locale persistence, and right-to-left requirements must follow BetterF requirements.
+Keep user-facing text separate from business logic where localization is needed. Supported languages, default locale, locale persistence, and right-to-left requirements must follow theeverthread requirements.
 
 ## Testing
 

@@ -1,14 +1,14 @@
 # Project architecture
 
-This repository holds the version-controlled architecture for `betterf`. Backend and frontend documentation describe their respective responsibilities; shared decisions explain choices that affect the system as a whole.
+This repository holds the version-controlled architecture for `theeverthread`. Backend and frontend documentation describe their respective responsibilities; shared decisions explain choices that affect the system as a whole.
 
 ## Documentation status
 
-This repository currently contains a reusable architecture baseline. BetterF-specific domains, schema, endpoints, routes, authentication behavior, deployment topology remain to be designed. The inherited Spring Boot and Angular technology stack is retained for BetterF.
+This repository currently contains a reusable architecture baseline. theeverthread-specific domains, schema, endpoints, routes, authentication behavior, deployment topology remain to be designed. The inherited Spring Boot and Angular technology stack is retained for theeverthread.
 
 - The strategic documents define the retained technology stack and reusable engineering rules.
 - Backend and frontend guides describe the selected stack. They are implementation guidance, not evidence that the application or build configuration already exists.
-- Examples do not define BetterF product requirements. Validate framework-specific APIs against selected versions before implementation.
+- Examples do not define theeverthread product requirements. Validate framework-specific APIs against selected versions before implementation.
 - Record significant project choices in `decisions/` with **Proposed**, **Accepted**, or **Superseded** status. Accepted decisions govern the applicable implementation.
 
 The accepted [technology baseline](decisions/0001-technology-baseline.md) records the stack and its scope.
@@ -18,7 +18,7 @@ Start with the [context index](context-index.md), [backend architecture](backend
 ## Workspace
 
 ```text
-betterf/
+theeverthread/
 ├── AGENTS.md
 ├── architecture/       # This repository
 │   ├── README.md
@@ -34,7 +34,7 @@ Paths in this README are relative to the architecture repository unless stated o
 
 ## System overview
 
-Refer to `betterf/project-context.md` to understand the context and the scope of the project and the business behind it as well.
+Refer to `theeverthread/project-context.md` to understand the context and the scope of the project and the business behind it as well.
 
 ## Backend architecture
 
@@ -63,6 +63,8 @@ Start frontend documentation in `frontend/README.md`. Cover the topics relevant 
 Keep implementation in the sibling application's `frontend/` directory. Document how the UI consumes backend contracts; backend authorization remains responsible for protecting server-side operations.
 
 ## Shared decisions
+
+- [Product and application namespace rename](decisions/0007-product-rename.md)
 
 - [Accepted application versioning](decisions/0003-application-versioning.md)
 

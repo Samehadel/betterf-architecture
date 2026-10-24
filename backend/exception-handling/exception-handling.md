@@ -1,6 +1,6 @@
 # Exception Handling — Implementation Guide
 
-> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected theeverthread technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Error responsibilities
 
@@ -21,7 +21,7 @@ public interface ApplicationError {
 }
 ```
 
-Each domain can implement that interface with its own error definitions. A shared base exception can carry an error identifier, safe message arguments, and an underlying cause. These classes are a possible design, not existing BetterF infrastructure.
+Each domain can implement that interface with its own error definitions. A shared base exception can carry an error identifier, safe message arguments, and an underlying cause. These classes are a possible design, not existing theeverthread infrastructure.
 
 ## Central translation
 

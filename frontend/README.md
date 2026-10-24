@@ -1,6 +1,6 @@
 # Frontend Guides
 
-Start with [Frontend Architecture](../frontend-architecture.md) for the selected technology stack and reusable design rules. These guides apply to that stack; examples do not define BetterF business requirements. See [documentation status](../README.md#documentation-status).
+Start with [Frontend Architecture](../frontend-architecture.md) for the selected technology stack and reusable design rules. These guides apply to that stack; examples do not define theeverthread business requirements. See [documentation status](../README.md#documentation-status).
 
 | Topic | Scope |
 |---|---|

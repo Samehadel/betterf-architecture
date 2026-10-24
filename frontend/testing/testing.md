@@ -1,6 +1,6 @@
 # Frontend Testing — Implementation Guide
 
-> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected theeverthread technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Test layers
 
@@ -21,10 +21,10 @@ Prefer accessible roles, names, and labels for user interactions. Use stable tes
 
 ## End-to-end coverage
 
-Derive journeys from BetterF requirements. Include relevant access restrictions, navigation, error recovery, keyboard use, and responsive layouts. Keep fixtures isolated and repeatable; avoid relying on uncontrolled shared data.
+Derive journeys from theeverthread requirements. Include relevant access restrictions, navigation, error recovery, keyboard use, and responsive layouts. Keep fixtures isolated and repeatable; avoid relying on uncontrolled shared data.
 
 Use Playwright for browser tests. Configure browsers, server startup, and authentication fixtures when the application is initialized.
 
 ## Commands and coverage
 
-Record verified commands from the selected build and CI. Coverage targets should reflect risk and meaningful behavior; no inherited percentage or test-runner configuration is an accepted BetterF gate.
+Record verified commands from the selected build and CI. Coverage targets should reflect risk and meaningful behavior; no inherited percentage or test-runner configuration is an accepted theeverthread gate.

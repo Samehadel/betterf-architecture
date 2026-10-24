@@ -1,12 +1,12 @@
 # Angular Routing — Implementation Guide
 
-> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected theeverthread technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Route structure
 
 Use Angular Router and define routes around approved user journeys. Use `loadComponent` for individual standalone pages and `loadChildren` to group feature route trees where useful. Include deliberate fallback and missing-resource behavior.
 
-Illustrative route, not a BetterF URL:
+Illustrative route, not a theeverthread URL:
 
 ```typescript
 {
@@ -34,4 +34,4 @@ Use router links for navigable controls, provide an active-page indication, and 
 
 ## Verification
 
-Test direct links, reloads, parameter changes, unknown paths, denied access, unsaved changes, and the selected state lifetime. Actual routes, public pages, role checks, and landing destinations remain undefined until BetterF journeys are designed.
+Test direct links, reloads, parameter changes, unknown paths, denied access, unsaved changes, and the selected state lifetime. Actual routes, public pages, role checks, and landing destinations remain undefined until theeverthread journeys are designed.

@@ -1,6 +1,6 @@
 # Database Migrations — Implementation Guide
 
-> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected theeverthread technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## General discipline
 
@@ -37,7 +37,7 @@ CREATE TABLE EXAMPLE_RESOURCE (
 -- rollback DROP TABLE EXAMPLE_RESOURCE;
 ```
 
-The example is not a BetterF table definition. Identifier generation, column casing, and timestamps must follow the selected schema conventions. The rollback drops stored data; assess that consequence before applying it.
+The example is not a theeverthread table definition. Identifier generation, column casing, and timestamps must follow the selected schema conventions. The rollback drops stored data; assess that consequence before applying it.
 
 ## Configuration and execution
 

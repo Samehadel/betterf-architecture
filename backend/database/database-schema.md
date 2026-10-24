@@ -1,10 +1,10 @@
 # Database Schema — Documentation Outline
 
-> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected theeverthread technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Status
 
-PostgreSQL and Liquibase are selected. BetterF tables, relationships, and identifier strategy remain to be designed.
+PostgreSQL and Liquibase are selected. theeverthread tables, relationships, and identifier strategy remain to be designed.
 
 ## Information to capture when the schema is designed
 

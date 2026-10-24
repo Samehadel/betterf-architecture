@@ -2,7 +2,7 @@
 
 ## Status
 
-BetterF uses Java and Spring Boot. The inherited technical stack and reusable conventions below are retained; domain models, deployment topology, and product-specific authentication behavior remain to be designed. The [backend guides](backend/README.md) explain implementation patterns. See the accepted [technology baseline](decisions/0001-technology-baseline.md).
+theeverthread uses Java and Spring Boot. The inherited technical stack and reusable conventions below are retained; domain models, deployment topology, and product-specific authentication behavior remain to be designed. The [backend guides](backend/README.md) explain implementation patterns. See the accepted [technology baseline](decisions/0001-technology-baseline.md).
 
 ## Technology stack
 
@@ -41,7 +41,7 @@ Pin compatible versions in the application build. These choices specify the inte
 - Keep cross-cutting infrastructure separate from business rules; shared code must have a clear responsibility.
 - Use Spring Modulith architecture tests to verify module boundaries. Do not claim checks are enforced until they exist in the build.
 
-Domain names and package names will follow BetterF requirements. No inherited domain map is prescribed.
+Domain names and package names will follow theeverthread requirements. No inherited domain map is prescribed.
 
 ## Responsibilities within a module
 
@@ -65,7 +65,7 @@ Keep request/response models, endpoint behavior, and [API documentation](api-spe
 
 Centralize authentication integration and shared transport security configuration. Enforce resource permissions and ownership at the server-side use-case boundary, including calls that do not originate in HTTP controllers.
 
-Public endpoints, roles, credentials, session lifetime, refresh behavior, and identity providers require BetterF-specific decisions. See the [security guide](backend/security/security.md) for the reusable review structure.
+Public endpoints, roles, credentials, session lifetime, refresh behavior, and identity providers require theeverthread-specific decisions. See the [security guide](backend/security/security.md) for the reusable review structure.
 
 ## Persistence and migrations
 

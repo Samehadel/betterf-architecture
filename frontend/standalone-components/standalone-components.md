@@ -1,6 +1,6 @@
 # Angular Standalone Components — Implementation Guide
 
-> Implementation guidance for the selected BetterF technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
+> Implementation guidance for the selected theeverthread technology stack; examples do not define product requirements. See [documentation status](../../README.md#documentation-status). Examples are illustrative; validate framework APIs against the versions selected for implementation.
 
 ## Component boundaries
 
@@ -28,7 +28,7 @@ export class ItemCardComponent {
 <button type="button" (click)="selected.emit()">{{ label() }}</button>
 ```
 
-This example follows the selected standalone, external-template, and OnPush conventions; it does not define a BetterF feature.
+This example follows the selected standalone, external-template, and OnPush conventions; it does not define a theeverthread feature.
 
 ## Imports and dependency injection
 

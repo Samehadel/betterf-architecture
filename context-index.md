@@ -4,7 +4,7 @@
 
 [README.md](README.md) is the repository entry point and defines [documentation status](README.md#documentation-status). Workspace instructions and business source locations live in the parent workspace's `AGENTS.md` and `project-context.md`.
 
-The Spring Boot and Angular stack and its reusable technical conventions are selected for BetterF. See the accepted [technology baseline](decisions/0001-technology-baseline.md). Examples are not product requirements or evidence of installed tooling; product-specific choices remain open.
+The Spring Boot and Angular stack and its reusable technical conventions are selected for theeverthread. See the accepted [technology baseline](decisions/0001-technology-baseline.md). Examples are not product requirements or evidence of installed tooling; product-specific choices remain open.
 
 ## Strategic documents
 

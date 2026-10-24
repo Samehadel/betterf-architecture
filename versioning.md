@@ -1,6 +1,6 @@
-# BetterF versioning and daily development
+# theeverthread versioning and daily development
 
-BetterF currently ships its backend and frontend together. The root [`VERSION`](../VERSION) file is the source of the application version, initially `0.1.0`. Frontend package metadata mirrors it; Gradle reads it directly.
+theeverthread currently ships its backend and frontend together. The root [`VERSION`](../VERSION) file is the source of the application version, initially `0.1.0`. Frontend package metadata mirrors it; Gradle reads it directly.
 
 **Every merge can deploy without receiving a new release number.** Ordinary branches do not reserve or increment a sequence number. Each development deployment is already identified by its Git commit and the two image digests. A named release groups a deliberately selected, verified set of changes.
 
@@ -14,7 +14,7 @@ BetterF currently ships its backend and frontend together. The root [`VERSION`](
 
 Several development builds can carry version `0.1.0` while having different commits and image digests. That does not mean several different official `v0.1.0` releases exist. Official release tags must identify one verified commit and should not be moved after publication. The version field alone must never be used to identify a development deployment.
 
-Dependency versions such as Spring Boot, Angular, Java and PostgreSQL are separate from the BetterF release number. They are changed deliberately in their own configuration, with appropriate tests.
+Dependency versions such as Spring Boot, Angular, Java and PostgreSQL are separate from the theeverthread release number. They are changed deliberately in their own configuration, with appropriate tests.
 
 ## Daily sequence: no version bump required
 
@@ -22,7 +22,7 @@ Dependency versions such as Spring Boot, Angular, Java and PostgreSQL are separa
 2. Run `node scripts/version.mjs --check` from the repository root, plus the application checks relevant to the change. The version check is also part of CI.
 3. Open a PR and review it. PR workflows verify code; they do not publish or deploy application images.
 4. Merge into `develop`. With repository variable `AWS_DEPLOY_ENABLED=true`, successful checks lead to image publication and the development deployment.
-5. Identify that deployment by the Actions run, source commit and image digests. `/opt/betterf/current.env` records the last successful image references; inspect running containers when diagnosing partial failures.
+5. Identify that deployment by the Actions run, source commit and image digests. `/opt/theeverthread/current.env` records the last successful image references; inspect running containers when diagnosing partial failures.
 
 Two branches can both keep version `0.1.0` without a version conflict. If another PR changes the release version while yours is open, update your branch and use the authoritative merged value rather than inventing a branch-specific version.
 
